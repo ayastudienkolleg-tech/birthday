@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #F6EBDD;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Georgia, serif;
+    color: #795548;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    background-color: #C89B82;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #A87963;
+}
+.book-page {
+    display: none;
+    background-color: #FFF9F1;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 85%;
+    box-shadow: 0 10px 30px rgba(121, 85, 72, 0.15);
+}
+@keyframes pageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.book-page {
+    animation: pageAppear 0.7s ease;
+}
+.polaroid {
+    background-color: #FFFFFF;
+    padding: 12px 12px 20px;
+    width: 220px;
+    max-width: 85%;
+    margin: 25px auto;
+    box-shadow: 0 5px 15px rgba(121, 85, 72, 0.15);
+    transform: rotate(-2deg);
+}
+
+.photo-placeholder {
+    background-color: #EBD9CA;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-placeholder span {
+    font-size: 45px;
+    color: #A87963;
+}
+
+.photo-placeholder p {
+    font-size: 14px;
+    color: #795548;
+}
+
+.photo-caption {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+#book-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navigation button {
+    padding: 12px 18px;
+    font-size: 14px;
+}
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.audio-box audio {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+.ending-message {
+    font-size: 23px;
+    font-style: italic;
+    color: #A87963;
+    line-height: 1.8;
+    margin-top: 35px;
+    padding: 25px 20px;
+    border-top: 1px solid #EBD9CA;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .book-page {
+        width: 90%;
+        padding: 25px 15px;
+        box-sizing: border-box;
+    }
+
+    .polaroid {
+        width: 200px;
+        max-width: 85%;
+    }
+
+    .photo-placeholder {
+        height: 260px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .audio-box audio {
+        max-width: 100%;
+    }
+    #netlify-badge,
+a[href*="netlify.com"] img {
+    display: none !important;
+}
+}
